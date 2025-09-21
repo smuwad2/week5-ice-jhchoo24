@@ -37,7 +37,7 @@
             // Fetch categories from the server using Axios
             // and display them in the select element
             // url: http://localhost:3010/categories
-            const url = "https://orange-guacamole-wrj56q459jp7h9j67-3000.app.github.dev/categories";
+            const url = "/categories";
             try {
                 const response = await axios.get(url)
                 const categories = response.data
@@ -71,7 +71,7 @@
                 return null;
             }
             if (selectedCategory == "all"){
-                const url = "https://orange-guacamole-wrj56q459jp7h9j67-3000.app.github.dev/items";
+                const url = "/items";
                 try{
                     const response = await axios.get(url);
                     console.log(response.data);
@@ -81,7 +81,7 @@
                     console.log(error);
                 }
             }else{
-                const url = "https://orange-guacamole-wrj56q459jp7h9j67-3000.app.github.dev/items";
+                const url = "/items";
                 try{
                     const response = await axios.get(url,{
                         params: {
